@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS mydisk_db;
 USE mydisk_db;
 
 
-CREATE TABLE media_file (
+CREATE TABLE media (
   id INT NOT NULL AUTO_INCREMENT,
   title VARCHAR(100) NOT NULL,
   years VARCHAR(15) NOT NULL,
@@ -18,12 +18,12 @@ CREATE TABLE media_file (
   PRIMARY KEY (id)
 );
 
-ALTER TABLE media_file ADD years VARCHAR(15) NOT NULL AFTER title;
+ALTER TABLE media ADD years VARCHAR(15) NOT NULL AFTER title;
 
-DESCRIBE media_file;
+DESCRIBE media;
 
 
-INSERT INTO media_file (id, title, years, released, genre, director, actors, plot, poster, data_type) 
+INSERT INTO media (id, title, years, released, genre, director, actors, plot, poster, data_type) 
   VALUES (1, 'Tenet', '2020', '2020-09-03', 'Action, Sci-Fi, Thriller', 'Christopher Nolan', 
           'John David Washington, Robert Pattinson, Elizabeth Debicki', 
           'Armed with only one word, Tenet, and fighting for the survival of the entire world, 
@@ -32,7 +32,7 @@ INSERT INTO media_file (id, title, years, released, genre, director, actors, plo
           'https://m.media-amazon.com/images/M/MV5BMzU3YWYwNTQtZTdiMC00NjY5LTlmMTMtZDFlYTEyODBjMTk5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg',
           'movie');
 
-SELECT * FROM media_file;
+SELECT * FROM media;
 
 
 CREATE TABLE user (

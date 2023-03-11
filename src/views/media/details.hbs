@@ -1,0 +1,30 @@
+<div class="container">
+
+    <div class="moviecard row">
+        
+        <div class="movie-poster-bg col-md-4" style="background: url({{media.poster}}); background-size: 360px 480px;"></div>
+        <div class="movie-poster-sm col-md-4" style="background: url({{media.poster}}); background-size: 100% 350px;"></div>
+            
+            <div id="movie-content col-md-4">
+                <div class="movie-title">
+                    <h2>{{media.title}}</h2>
+                </div>
+                <span class="movie-year">{{media.years}}</span>
+                <div class="movie-details">
+                    <span class="movie-duration">Genre</span>
+                    <span class="movie-genre">{{media.genre}}</span>
+                </div>
+                <div class="movie-castcrew">
+                    <span class="title">Director</span>
+                    <span class="name">{{media.director}}</span>
+                </div>
+                <div class="movie-castcrew">
+                    <span class="title">Actors</span>
+                    <span class="name">{{media.actors}}</span>
+                </div>
+                <div class="movie-synopsis">
+                    {{media.plot}}
+                </div>
+            </div>
+    </div>
+</div>

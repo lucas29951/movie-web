@@ -1,0 +1,58 @@
+<div class="container p-2">
+    <div class="card">
+        <h5 class="card-header text-center text-bg-primary">ADD MEDIA</h5>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12 mx-auto">
+                    <form action="/files/add" method="POST" class="row g-3">
+                        <div class="form-group col-12 mt-3">
+                            <input type="text" class="form-control" name="title" placeholder="Title" autofocus>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" name="genre" placeholder="Genre">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <!--<input type="text" class="form-control" name="data_type" placeholder="Type">-->
+
+                            <select class="form-select form-control" aria-label="movie" name="data_type">
+                                <option selected>Select a type</option>
+                                <option value="movie">movie</option>
+                                <option value="series">serie</option>
+                                <option value="anime">anime</option>
+                            </select>
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="date" class="form-control" name="released" placeholder="Released">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" name="years" placeholder="Year">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="director" placeholder="Director">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="actors" placeholder="Actors">
+                        </div>
+                        <div class="form-group">
+                            <textarea row="2" class="form-control" name="plot" placeholder="Plot"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="poster" placeholder="Poster (image link)">
+                        </div>
+                        <div class="form-group d-grid gap-2 col-md-6">
+                            <button class="btn btn-success btn-block">
+                                Save
+                            </button>
+                        </div>
+                        <div class="form-group d-grid gap-2 col-md-6">
+                            <a class="btn btn-danger btn-block" href="/">
+                                Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

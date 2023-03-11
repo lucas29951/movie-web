@@ -1,0 +1,52 @@
+
+{{#if error }}
+<div class="container p-2">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <i class="fa-solid fa-triangle-exclamation me-1"></i>
+                {{error}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+
+{{#if success }}
+<div class="container p-2">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="fa-solid fa-circle-check me-1"></i>
+                {{success}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+
+{{#if message}}
+<div class="container p-4 text-center" style="position: absolute; z-index: 10; top: 30vh; left: 8vw;">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="alert alert-warning show" role="alert">
+                <h4 class="alert-heading">
+                    <i class="fa-solid fa-circle-question me-1"></i>
+                    Confirm Delete
+                </h4>
+                <hr>
+                <p>
+                    {{message}}
+                </p>
+                <hr>
+                <p class="mb-0 mx-auto">
+                    <a class="btn btn-success me-5" href="#">YES</a>
+                    <a class="btn btn-danger" href="#">NO</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}

@@ -1,0 +1,52 @@
+<div class="container p-2">
+
+    <div class="row mb-2">
+        <div class="col-md-5 mx-auto text-center">
+            <h3 class="profile-title-color">Admin dashboard</h3>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <form class="d-flex" role="search" action="/dashboard" method="POST">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" aria-label="Search" name="media_search">
+                <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+
+        {{#each media}}
+        <div class="frame col-md-3">
+            <div class="card text-center profile-title-color card-media-dash">
+                <div class="card-body">
+                    <!--<a href="/media/{{title}}" class="link-dash">-->
+                    <img src="{{poster}}" alt="poster" width="210">
+                    <p class="m-2">{{title}}</p>
+                    <!--</a>-->
+                    
+                    <div class="details">
+                        <a href="/files/edit/{{id}}" class="card-ops-link me-3">
+                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                        </a>
+                        <a href="/files/delete/{{id}}" class="card-ops-link me-3">
+                            <i class="fa-solid fa-trash-can fa-2x"></i>
+                        </a>
+                        <a href="/media/{{title}}" class="card-ops-link">
+                            <i class="fa-solid fa-eye fa-2x"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No results found.</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
